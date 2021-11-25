@@ -22,7 +22,7 @@ public class TriangleTest {
         if (s>0){
         System.out.println("Площадь вычисляется");
         }
-        Assertions.assertTrue(true,"Площадь вычисляется");
+        Assertions.assertTrue(true, "Площадь вычисляется");
         Assertions.assertTrue(true);
     }
 
