@@ -22,7 +22,7 @@ public class TriangleTest {
         if (s>0){
         System.out.println("Площадь вычисляется");
         }
-        Assertions.assertTrue(true, "Площадь вычисляется");
+        Assertions.assertTrue(s>0, "Площадь вычисляется");
         Assertions.assertTrue(true);
     }
 
@@ -36,20 +36,20 @@ public class TriangleTest {
         double s = Math.sqrt(p*(p-a)*(p-b)*(p-c));
         if (s==0){
         System.out.println("Это не треугольник");
-        Assertions.assertTrue(true,"Это не треугольник");
+        Assertions.assertTrue(s==0,"Это не треугольник");
         Assertions.assertTrue(true);}
         if (c>a+b){
             System.out.println("Из таких сторон треугольник не получится");
-            Assertions.assertTrue(true,"Из таких сторон треугольник не получится");
+            Assertions.assertTrue(c>(a+b),"Из таких сторон треугольник не получится");
             Assertions.assertTrue(true);
         }
         if (s>0&&a>0&&b>0&&c>0) {System.out.println("Площадь треугольника равна "+s);
-            Assertions.assertTrue(true,"Площадь треугольника равна ");
+            Assertions.assertTrue(s>0&&a>0&&b>0&&c>0,"Площадь треугольника равна ");
             Assertions.assertTrue(true);
         }
         if (a<0||b<0||c<0) {
             System.out.println("Стороны не могут быть меньше нуля");
-            Assertions.assertTrue(true,"Стороны не могут быть меньше нуля");
+            Assertions.assertTrue(a<0||b<0||c<0,"Стороны не могут быть меньше нуля");
             Assertions.assertTrue(true);
         }
     }
